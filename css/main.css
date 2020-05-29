@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html {
+    width: 100%;
+}
+
+.main {
+    margin-top: 3rem;
+
+}
+
+.main img {
+    padding-top: 1rem;
+    width: 18rem;
+}
+
+.main p:nth-child(1) {
+    font-size: 2rem;
+
+}
+
+.main span{
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: rgb(41, 212, 41);
+    color: rgb(245, 245, 245);
+    width: 30rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    border-radius: 5px; 
+}
+
+.compang-card{
+    margin: 3rem auto;
+    width: 85rem;
+    margin-top: 3rem;
+    height: 10rem;
+    border-radius: 10px; 
+    box-shadow: 10px 10px 10px 10px rgb(110, 99, 99)
+}
+
+.compang-card #logo {
+    float: left;
+    /* display: inline-block; */
+    width: 10rem;
+    height: 100%;
+}
+
+.compang-card #logo img {
+    border-radius: 50%; 
+    margin:1.5rem;
+    width: 7rem;
+}
+.compang-card #name {
+    float: left;
+    /* display: inline-block; */
+    width: 75rem;
+}
+
+.compang-card #name p:nth-child(1) {
+    margin-top: 1.5rem;
+
+}
+.compang-card #name p:nth-child(2) {
+    margin-top: 5rem;
+
+}
