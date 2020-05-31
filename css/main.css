@@ -6,6 +6,11 @@
 
 html {
     width: 100%;
+    /* font-size: 62.5%; 10 ÷ 16 × 100% = 62.5% */
+}
+
+a {
+    text-decoration: none;
 }
 
 .main {
@@ -60,13 +65,21 @@ html {
     float: left;
     /* display: inline-block; */
     width: 75rem;
+    text-align: left;
 }
 
-.compang-card #name p:nth-child(1) {
-    margin-top: 1.5rem;
-
+.compang-card #name h4{
+    margin: 1.5rem 0 0 1.5rem;
+  
+    font-size: 1.5rem;
+    text-align: left;
 }
-.compang-card #name p:nth-child(2) {
-    margin-top: 5rem;
+
+.compang-card #name a{
+    margin: 4rem 0 0 1.5rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: left;
+    color:gray;
 
 }
