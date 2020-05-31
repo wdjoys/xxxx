@@ -6,7 +6,9 @@
     <title>天地奔牛 - 展品设备介绍 - H5</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./vuejs/main.js"></script>
 </head>
+
 <body>
     <script>
         // 设置根hhtml font-size
@@ -20,24 +22,25 @@
         };
     </script>
     <div id="app">
-        <div class="main">
-            <h4>设备介绍</h4>
-            <img src="./img/file_pdf@2x.png" alt="">
-            <p>dzb.pdf</p>
-            <p>388.5KB</p>
-            <a href="./dzb.pdf"><span>查看</span></a>
-            
-        </div>
-        <div class='compang-card'>
-            <div id="name">
-                <h4>宁夏天地奔牛实业集团有限公司</h4>
-                <a href="http://www.khb.com/index.php?g=Wap&m=Index&a=content&token=uzeuwh1444287382&classid=5078&id=2951">点击了解详情</a>
-            </div>
-            <div id="logo"><img src="./img/logo.png" alt=""></div>
-        <div>
+        <my-file v-bind:xxx="file_1"></my-file>
+        <my-company></my-company>
     </div>
 
-    <script src="./vuejs/main.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                file_1: {
+                    'title': '设备名称',
+                    'file_icon': './img/file_pdf@2x.png',
+                    'file_title': 'dzb.pdf',
+                    'file_size': '388.5KB',
+                    'file_path': './dzb.pdf'
+                }
+            }
+        });
+    </script>
 
 </body>
+
 </html>
