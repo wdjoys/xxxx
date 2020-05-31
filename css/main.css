@@ -4,10 +4,6 @@
     text-align: center;
 }
 
-html {
-    width: 100%;
-    /* font-size: 62.5%; 10 ÷ 16 × 100% = 62.5% */
-}
 
 a {
     text-decoration: none;
