@@ -5,23 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-    <script src="./vuejs/main.js"></script>
+
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <script>
+
+        window.addEventListener('orientationchange', setRem);
+    
+        window.addEventListener('resize', setRem);
+    
+        setRem();
+    
+        function setRem() {
+
+            var html = document.querySelector('html');
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 100 + 'px';
+    
+        };
+    
+    </script>
     <div id="app">
         <div class="main">
-            <h2>设备介绍</h2>
+            <h4>设备介绍</h4>
             <img src="./img/file_pdf@2x.png" alt="">
             <p>dzb.pdf</p>
             <p>388.5KB</p>
-            <a href=""><span>查看</span></a>
+            <a href="./dzb.pdf"><span>查看</span></a>
             
         </div>
         <div class='compang-card'>
             <div id="name">
                 <h4>宁夏天地奔牛实业集团有限公司</h4>
-                <a href="">点击了解详情</a>
+                <a href="http://www.khb.com/index.php?g=Wap&m=Index&a=content&token=uzeuwh1444287382&classid=5078&id=2951">点击了解详情</a>
             </div>
             <div id="logo"><img src="./img/logo.png" alt=""></div>
         <div>
@@ -37,11 +54,9 @@
         setRem();
     
         function setRem() {
-    
+
             var html = document.querySelector('html');
-    
             var width = html.getBoundingClientRect().width;
-    
             html.style.fontSize = width / 16 + 'px';
     
         };
