@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天地奔牛H5展品设备介绍</title>
+    <title>天地奔牛 - 展品设备介绍 - H5</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <script>
-
+        // 设置根hhtml font-size
         window.addEventListener('orientationchange', setRem);
-    
         window.addEventListener('resize', setRem);
-    
         setRem();
-    
         function setRem() {
-
             var html = document.querySelector('html');
             var width = html.getBoundingClientRect().width;
             html.style.fontSize = width / 100 + 'px';
-    
         };
-    
     </script>
     <div id="app">
         <div class="main">
@@ -45,22 +38,6 @@
     </div>
 
     <script src="./vuejs/main.js"></script>
-    <script>
 
-        window.addEventListener('orientationchange', setRem);
-    
-        window.addEventListener('resize', setRem);
-    
-        setRem();
-    
-        function setRem() {
-
-            var html = document.querySelector('html');
-            var width = html.getBoundingClientRect().width;
-            html.style.fontSize = width / 16 + 'px';
-    
-        };
-    
-    </script>
 </body>
 </html>
