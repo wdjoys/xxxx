@@ -19,18 +19,19 @@
         setRem();
 
         function setRem() {
-            var width = html.getBoundingClientRect().width;
-            html.style.fontSize = width / 100 + 'px';
-            // modifileRootRem ()
-        };
+            var width = document.documentElement.clientWidth;
+            var rem = width / 100
+            html.style.fontSize = rem + 'px';
+            // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
+     
+            windowWidth = document.documentElement.clientWidth
+            pageWidth=document.documentElement.scrollWidth
 
-        function modifileRootRem () {
-                var fontSize = parseFloat(html.style.fontSize);
-                var finalFontSize = parseFloat(window.getComputedStyle(html).fontSize);
-                if(finalFontSize === fontSize) return;
-                html.style.fontSize=fontSize*fontSize/finalFontSize+ "px";
-                console.log(fontSize*fontSize/finalFontSize,finalFontSize)
+            if (windowWidth === pageWidth) return
+            html.style.fontSize = rem * windowWidth/pageWidth + 'px';
+            console.log(rem,html.style.fontSize)
         };
+        
     </script>
 </head>
 
