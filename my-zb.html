@@ -24,7 +24,7 @@
             html.style.fontSize = width / 100 + 'px';
             let realFontSize = window.getComputedStyle(html).fontSize;
             if (realFontSize === html.style.fontSize) return;
-            html.style.fontSize = (width / 100)*(width / 100)/realFontSize
+            html.style.fontSize = (width / 100)*(width / 100) / realFontSize + 'px'
         };
         
     </script>
