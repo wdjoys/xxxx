@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>天地奔牛 - 展品设备介绍 - H5</title>
-    <!-- <script src="./js/rem.js"></script> -->
+    <script src="./js/rem.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script src="./vuejs/main.js"></script>
@@ -15,7 +15,7 @@
         // window.addEventListener('resize', setRem);
         // setRem();
         // function setRem() {
-        //     var html = document.querySelector('html');
+            // var html = document.querySelector('html');
         //     var width1 = html.getBoundingClientRect().width;
 
         //     var width = document.documentElement.clientWidth;
@@ -23,22 +23,6 @@
         //     html.style.fontSize = width / 100 + 'px';
         //     alert(width)
         // };
-
-        function resizeFont() {
-            //获取屏幕宽度
-            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
-            //设计图参考宽度
-            let design = 10000;
-            if (clientWidth > 750)
-                document.getElementsByTagName('html').item(0).style.fontSize = '6px';
-            else
-                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
-        }
-        resizeFont();
-        window.onresize = function () {
-            resizeFont();
-        }
-
     </script>
 </head>
 
