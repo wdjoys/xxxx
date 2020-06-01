@@ -7,22 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天地奔牛 - 展品设备介绍 - H5</title>
     <!-- <script src="./js/rem.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./vuejs/main.js"></script>
-    <script>
+    <script type="text/javascript" src="./vuejs/main.js"></script>
+    <script type="text/javascript" >
         // 设置根html font-size
         var html = document.querySelector('html');
-        
         window.addEventListener('orientationchange', setRem);
         window.addEventListener('resize', setRem);
-  
+        
+        var width = html.getBoundingClientRect().width
+        var rem = width / 100
+
+
         setRem();
 
         function setRem() {
             //document.querySelector('html').getBoundingClientRect().width
-            var width = html.getBoundingClientRect().width
-            var rem = width / 100
+            
             html.style.fontSize = width / 100 + 'px';
             // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
             // document.body.scrollWidth
@@ -57,7 +59,7 @@
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript" >
         var app = new Vue({
             el: '#app',
             data: {
@@ -75,10 +77,13 @@
         // document.body.scrollWidth
         scrollWidth = document.body.scrollWidth
         screenWidth = window.screen.availWidth
+       
         alert(56+'scrollWidth:'+scrollWidth+'screenWidth:'+screenWidth)
-        if (screenWidth > 750 || scrollWidth === screenWidth ) return ;
-        html.style.fontSize = rem * scrollWidth/screenWidth + 'px';
-        console.log(rem,html.style.fontSize)
+        if (screenWidth < 750 || scrollWidth !== screenWidth ) {
+            html.style.fontSize = rem * scrollWidth/screenWidth + 'px';
+            console.log(rem,html.style.fontSize)
+        };
+        
     </script>
 
 
