@@ -19,7 +19,8 @@
         setRem();
 
         function setRem() {
-            var width = document.documentElement.clientWidth;
+            //document.querySelector('html').getClientRects.width
+            var width = html.getBoundingClientRect().width
             var rem = width / 100
             html.style.fontSize = rem + 'px';
             // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
