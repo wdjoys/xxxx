@@ -16,6 +16,9 @@
         
         window.addEventListener('orientationchange', setRem);
         window.addEventListener('resize', setRem);
+        window.onload = function(){
+            setRem();
+        }
         setRem();
 
         function setRem() {
