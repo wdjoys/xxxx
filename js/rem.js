@@ -31,6 +31,7 @@
           var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
           return defaultFontSize
         }
+        console.log(pxOneRem , adapt())
         pxOneRem = pxOneRem * pxOneRem / adapt();
         docEl.style.fontSize = pxOneRem + 'px'
       };
