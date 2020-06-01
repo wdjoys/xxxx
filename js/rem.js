@@ -17,7 +17,7 @@
         clearTimeout(tid);
         tid = setTimeout(refreshRem, 100)
     }
-
+    win.addEventListener('orientationchange', function() { dbcRefresh() }, false);
     win.addEventListener("resize", function() { dbcRefresh() }, false);
     win.addEventListener("pageshow", function(e) {
         if (e.persisted) { dbcRefresh() }
