@@ -2,37 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>天地奔牛 - 展品设备介绍 - H5</title>
+    <!-- <script src="./js/rem.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script src="./vuejs/main.js"></script>
     <script>
-        // // 设置根hhtml font-size
-        // window.addEventListener('orientationchange', setRem);
-        // window.addEventListener('resize', setRem);
-        // setRem();
-        // function setRem() {
-        //     var html = document.querySelector('html');
-        //     var width = html.getBoundingClientRect().width;
-        //     html.style.fontSize = width / 100 + 'px';
-        // };
+        // 设置根hhtml font-size
+        window.addEventListener('orientationchange', setRem);
+        window.addEventListener('resize', setRem);
+        setRem();
+        function setRem() {
+            var html = document.querySelector('html');
+            var width = html.getBoundingClientRect().width;
 
-
-
-    window.onload = function(){
-    /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
-      为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
-        getRem(10000,100)
-    };
-    window.onresize = function(){
-        getRem(10000,100)
-    };
-    function getRem(pwidth,prem){
-        var html = document.getElementsByTagName("html")[0];
-        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
-        html.style.fontSize = oWidth/pwidth*prem + "px";
-    }
+            var width = document.documentElement.clientWidth;
+            html.style.fontSize = width / 100 + 'px';
+        };
     </script>
 </head>
 
