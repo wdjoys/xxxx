@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,18 +11,34 @@
     <script src="./vuejs/main.js"></script>
     <script>
         // 设置根hhtml font-size
-        window.addEventListener('orientationchange', setRem);
-        window.addEventListener('resize', setRem);
-        setRem();
-        function setRem() {
-            var html = document.querySelector('html');
-            var width = html.getBoundingClientRect().width;
+        // window.addEventListener('orientationchange', setRem);
+        // window.addEventListener('resize', setRem);
+        // setRem();
+        // function setRem() {
+        //     var html = document.querySelector('html');
+        //     var width1 = html.getBoundingClientRect().width;
 
-            var width = document.documentElement.clientWidth;
-            
-            html.style.fontSize = width / 100 + 'px';
-            alert(width)
-        };
+        //     var width = document.documentElement.clientWidth;
+
+        //     html.style.fontSize = width / 100 + 'px';
+        //     alert(width)
+        // };
+
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 10000;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '6px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+
     </script>
 </head>
 
