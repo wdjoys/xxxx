@@ -15,7 +15,7 @@ a {
 .main {
     margin-top: 18rem;
     background-color:gold;
-    width: 100rem;
+    width: 100%;
 }
 
 .main h4{
@@ -47,7 +47,7 @@ a {
 
 .compang-card{
     margin: 30rem auto 10rem;
-    width: 94rem;
+    width: 94%;
 
     height: 28rem;
     border-radius: 1rem; 
