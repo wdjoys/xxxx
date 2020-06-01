@@ -20,15 +20,16 @@
         function setRem() {
             var width = html.getBoundingClientRect().width;
             html.style.fontSize = width / 100 + 'px';
-            modifileRootRem ()
+            // modifileRootRem ()
         };
 
         function modifileRootRem () {
                 var fontSize = parseFloat(html.style.fontSize);
                 var finalFontSize = parseFloat(window.getComputedStyle(html).fontSize);
-                console.log(fontSize,finalFontSize)
                 if(finalFontSize === fontSize) return;
                 html.style.fontSize=fontSize*fontSize/finalFontSize+ "px";
+                console.log(fontSize*fontSize/finalFontSize,finalFontSize)
+
         };
     </script>
 </head>
