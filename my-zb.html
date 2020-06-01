@@ -24,14 +24,15 @@
             var rem = width / 100
             html.style.fontSize = width / 100 + 'px';
             // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
-     
+            alert(51)
+            
             windowWidth = document.documentElement.clientWidth
             pageWidth=document.documentElement.scrollWidth
-            alert(5)
-            if (windowWidth === pageWidth) return
-            html.style.fontSize = rem * windowWidth/pageWidth + 'px';
-            console.log(rem,html.style.fontSize)
-            alert(55)
+            
+            // if (windowWidth === pageWidth) return
+            // html.style.fontSize = rem * windowWidth/pageWidth + 'px';
+            // console.log(rem,html.style.fontSize)
+            // alert(55)
         };
         
     </script>
@@ -39,8 +40,22 @@
 
 <body>
     <div id="app">
-        <my-file v-bind:xxx="file_1"></my-file>
-        <my-company></my-company>
+        <!-- <my-file v-bind:xxx="file_1"></my-file> -->
+        <!-- <my-company></my-company> -->
+        <div class="main">
+            <h4>设备名称</h4>
+            <img src='./img/file_pdf@2x.png'>
+            <p>dzb.pdf</p>
+            <p>3848.5KB</p>
+            <a href='https://preview-static.clewm.net/cli/view-doc/view.html?url=https%3A%2F%2Fncstatic.clewm.net%2Frsrc%2F2020%2F0528%2F18%2Fff85d5ec0b6de11a907c32f57d5a7adb.pdf&filename=dzb.pdf&download=1&code=qXUSw7k&open=45a1642856fb47c39f875bf823d88a05&_=1590972975083&frompc=false'><span>查看</span></a> 
+        </div>
+        <div class='compang-card'>
+            <div id="name">
+                <h4>宁夏天地奔牛实业集团有限公司</h4>
+                <a href="http://www.khb.com/index.php?g=Wap&m=Index&a=content&token=uzeuwh1444287382&classid=5078&id=2951">点击了解详情</a>
+            </div>
+            <div id="logo"><img src="./img/logo.png" alt=""></div>
+        </div>
     </div>
 
     <script>
