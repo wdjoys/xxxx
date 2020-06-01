@@ -14,8 +14,8 @@
     var pxOneRem = 0;
     var remClient = 100;
     var docEl = doc.documentElement,
-      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-      recalc = function () {
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
         var clientWidth = docEl.clientWidth;
         if (!clientWidth) return;
         clientWidth = clientWidth > 900 ? 900 : clientWidth;
@@ -36,6 +36,6 @@
         docEl.style.fontSize = pxOneRem + 'px'
       };
     if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
+    // win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
   })(document, window);
