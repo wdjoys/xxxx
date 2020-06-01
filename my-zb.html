@@ -16,9 +16,7 @@
         
         window.addEventListener('orientationchange', setRem);
         window.addEventListener('resize', setRem);
-        window.onload = function(){
-            setRem();
-        }
+  
         setRem();
 
         function setRem() {
@@ -27,15 +25,12 @@
             var rem = width / 100
             html.style.fontSize = width / 100 + 'px';
             // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
-            
 
-            windowWidth = document.documentElement.clientWidth
-            pageWidth=document.documentElement.scrollWidth
-            alert(51+'width:'+width+'width:'+windowWidth+'width:'+pageWidth)
-            // if (windowWidth === pageWidth) return
-            // html.style.fontSize = rem * windowWidth/pageWidth + 'px';
-            // console.log(rem,html.style.fontSize)
-            // alert(55)
+            screenWidth=window.screen.availWidth
+            alert(55+'width:'+width+'screenWidth:'+screenWidth)
+            if (screenWidth >750 || width === screenWidth) return
+            html.style.fontSize = rem * width/screenWidth + 'px';
+            console.log(rem,html.style.fontSize)
         };
         
     </script>
