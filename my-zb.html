@@ -15,18 +15,14 @@
         var html = document.querySelector('html');
         window.addEventListener('orientationchange', setRem);
         window.addEventListener('resize', setRem);
-        
-        var width = html.getBoundingClientRect().width
-        var rem = width / 100
-
 
         setRem();
 
         function setRem() {
             //document.querySelector('html').getBoundingClientRect().width
-            
+            var width = html.getBoundingClientRect().width
             html.style.fontSize = width / 100 + 'px';
-            // console.log(document.body.clientWidth(),html.getBoundingClientRect().width)
+            // console.log(document.body.clientWidth(),document.querySelector('html').style.fontSize)
             // document.body.scrollWidth
             // scrollWidth = document.body.scrollWidth
             // screenWidth = window.screen.availWidth
