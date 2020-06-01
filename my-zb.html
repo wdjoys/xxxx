@@ -20,16 +20,11 @@
 
         function setRem() {
             //document.querySelector('html').getBoundingClientRect().width
-            var width = html.getBoundingClientRect().width
+            let width = html.getBoundingClientRect().width
             html.style.fontSize = width / 100 + 'px';
-            // console.log(document.body.clientWidth(),document.querySelector('html').style.fontSize)
-            // document.body.scrollWidth
-            // scrollWidth = document.body.scrollWidth
-            // screenWidth = window.screen.availWidth
-            // alert(55+'width:'+width)
-            // if (screenWidth >750 || scrollWidth === screenWidth) return
-            // html.style.fontSize = rem * scrollWidth/screenWidth + 'px';
-            // console.log(rem,html.style.fontSize)
+            let realFontSize = window.getComputedStyle(html).fontSize;
+            if (realFontSize === html.style.fontSize) return;
+            html.style.fontSize = (width / 100)*(width / 100)/realFontSize
         };
         
     </script>
