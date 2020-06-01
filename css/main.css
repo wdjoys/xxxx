@@ -15,6 +15,7 @@ a {
 .main {
     margin-top: 18rem;
     background-color: sienna;
+    width: 100%;
 }
 
 .main h4{
