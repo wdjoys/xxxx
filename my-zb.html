@@ -6,31 +6,31 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天地奔牛 - 展品设备介绍 - H5</title>
-    <script src="./js/rem.js"></script>
+    <!-- <script src="./js/rem.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script src="./vuejs/main.js"></script>
     <script>
         // 设置根html font-size
-        // var html = document.querySelector('html');
+        var html = document.querySelector('html');
         
-        // window.addEventListener('orientationchange', setRem);
-        // window.addEventListener('resize', setRem);
-        // setRem();
+        window.addEventListener('orientationchange', setRem);
+        window.addEventListener('resize', setRem);
+        setRem();
 
-        // function setRem() {
-        //     var width = html.getBoundingClientRect().width;
-        //     html.style.fontSize = width / 100 + 'px';
-        //     // modifileRootRem ()
-        // };
+        function setRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 100 + 'px';
+            // modifileRootRem ()
+        };
 
-        // function modifileRootRem () {
-        //         var fontSize = parseFloat(html.style.fontSize);
-        //         var finalFontSize = parseFloat(window.getComputedStyle(html).fontSize);
-        //         if(finalFontSize === fontSize) return;
-        //         html.style.fontSize=fontSize*fontSize/finalFontSize+ "px";
-        //         console.log(fontSize*fontSize/finalFontSize,finalFontSize)
-        // };
+        function modifileRootRem () {
+                var fontSize = parseFloat(html.style.fontSize);
+                var finalFontSize = parseFloat(window.getComputedStyle(html).fontSize);
+                if(finalFontSize === fontSize) return;
+                html.style.fontSize=fontSize*fontSize/finalFontSize+ "px";
+                console.log(fontSize*fontSize/finalFontSize,finalFontSize)
+        };
     </script>
 </head>
 
