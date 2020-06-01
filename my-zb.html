@@ -21,12 +21,12 @@
         function setRem() {
             //document.querySelector('html').getBoundingClientRect().width
             let width = html.getBoundingClientRect().width
-            let rem =  width / 100
+            let rem =  width / 200
             html.style.fontSize = rem + 'px';
-            let realFontSize = parseFloat(window.getComputedStyle(html).fontSize);
-            if (realFontSize === rem) return;
-            html.style.fontSize = rem * rem / realFontSize + 'px'
-            alert(rem * rem / realFontSize)
+            // let realFontSize = parseFloat(window.getComputedStyle(html).fontSize);
+            // if (realFontSize === rem) return;
+            // html.style.fontSize = rem * rem / realFontSize + 'px'
+            // alert(rem * rem / realFontSize)
         };
         
     </script>
