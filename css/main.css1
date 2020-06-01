@@ -6,8 +6,8 @@
 }
 
 p {
-    font-size: 14px;
-    margin-top: 1vw;
+    font-size: 3.5rem;
+    margin-top: 1rem;
 }
 a {
     text-decoration: none;
@@ -18,18 +18,19 @@ a {
 }
 
 .main {
-    margin-top: 18vw;
+    margin-top: 18rem;
+    background-color:gold;
     width: 100%;
 }
 
 .main h4{
-    font-size: 6vw;
+    font-size: 6rem;
 
 }
 
 .main img {
-    padding-top: 4vw;
-    width: 24vw;
+    padding-top: 4rem;
+    width: 24rem;
 }
 
 .main p:nth-child(4) {
@@ -38,56 +39,56 @@ a {
 }
 
 .main span{
-    margin-top: 7vw;
+    margin-top: 7rem;
     display: inline-block;
     background-color: rgb(36, 185, 36);
     color: rgb(245, 245, 245);
-    width: 38vw;
-    height: 9vw;
-    line-height: 9vw;
-    font-size: 3.8vw;
-    border-radius: 1vw; 
+    width: 38rem;
+    height: 9rem;
+    line-height: 9rem;
+    font-size: 3.8rem;
+    border-radius: 1rem; 
 }
 
 .compang-card{
-    margin: 30vw auto 10vw;
+    margin: 30rem auto 10rem;
     width: 94%;
 
-    height: 28vw;
-    border-radius: 1vw; 
-    box-shadow: 0 1vw 7vw 0 rgba(0,0,0,.15)
+    height: 28rem;
+    border-radius: 1rem; 
+    box-shadow: 0 1rem 7rem 0 rgba(0,0,0,.15)
 }
 
 .compang-card #logo {
     float: left;
     /* display: inline-block; */
-    width: 25vw;
+    width: 25rem;
     height: 100%;
 }
 
 .compang-card #logo img {
     border-radius: 50%; 
-    margin:4.5vw;
-    width: 18vw;
+    margin:4.5rem;
+    width: 18rem;
 }
 .compang-card #name {
     float: left;
     /* display: inline-block; */
-    width: 69vw;
+    width: 69rem;
     text-align: left;
 }
 
 .compang-card #name h4{
-    margin: 4vw 0 0 4vw;
+    margin: 4rem 0 0 4rem;
   
-    font-size: 4vw;
+    font-size: 4rem;
     text-align: left;
 }
 
 .compang-card #name a{
-    margin: 10vw 0 0 4vw;
+    margin: 10rem 0 0 4rem;
     display: inline-block;
-    font-size: 3vw;
+    font-size: 3rem;
     text-align: left;
     color:gray;
 
