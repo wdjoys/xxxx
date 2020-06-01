@@ -7,9 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script src="./vuejs/main.js"></script>
-</head>
-
-<body>
     <script>
         // 设置根hhtml font-size
         window.addEventListener('orientationchange', setRem);
@@ -21,6 +18,9 @@
             html.style.fontSize = width / 100 + 'px';
         };
     </script>
+</head>
+
+<body>
     <div id="app">
         <my-file v-bind:xxx="file_1"></my-file>
         <my-company></my-company>
