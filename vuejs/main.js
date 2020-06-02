@@ -10,7 +10,7 @@ Vue.component('my-file', {
   template: `
       <div class="main">
           <h4>{{xxx.title}}</h4>
-          <img :src='xxx.file_icon' alt="">
+          <img :src='xxx.file_icon'>
           <p>{{file_title}}</p>
           <p>{{xxx.file_size}}</p>
           <a :href='xxx.file_path'><span>查看</span></a> 
