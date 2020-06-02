@@ -49,42 +49,42 @@ a {
     border-radius: 1vw; 
 }
 
-.compang-card{
+.company-card{
     margin: 30vw auto 10vw;
-    width: 94%;
-
+    width: 94vw;
     height: 28vw;
     border-radius: 1vw; 
     box-shadow: 0 1vw 7vw 0 rgba(0,0,0,.15)
 }
 
-.compang-card #logo {
+.company-card #logo {
     float: left;
     /* display: inline-block; */
     width: 25vw;
     height: 100%;
 }
 
-.compang-card #logo img {
+.company-card #logo img {
     border-radius: 50%; 
     margin:4.5vw;
     width: 18vw;
 }
-.compang-card #name {
+.company-card #name {
     float: left;
     /* display: inline-block; */
     width: 69vw;
+    height: 100%;
     text-align: left;
 }
 
-.compang-card #name h4{
+.company-card #name h4{
     margin: 4vw 0 0 4vw;
   
     font-size: 4vw;
     text-align: left;
 }
 
-.compang-card #name a{
+.company-card #name a{
     margin: 10vw 0 0 4vw;
     display: inline-block;
     font-size: 3vw;

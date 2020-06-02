@@ -50,7 +50,7 @@ a {
     border-radius: 1rem; 
 }
 
-.compang-card{
+.company-card{
     margin: 30rem auto 10rem;
     width: 94%;
 
@@ -59,33 +59,33 @@ a {
     box-shadow: 0 1rem 7rem 0 rgba(0,0,0,.15)
 }
 
-.compang-card #logo {
+.company-card #logo {
     float: left;
     /* display: inline-block; */
     width: 25rem;
     height: 100%;
 }
 
-.compang-card #logo img {
+.company-card #logo img {
     border-radius: 50%; 
     margin:4.5rem;
     width: 18rem;
 }
-.compang-card #name {
+.company-card #name {
     float: left;
     /* display: inline-block; */
     width: 69rem;
     text-align: left;
 }
 
-.compang-card #name h4{
+.company-card #name h4{
     margin: 4rem 0 0 4rem;
   
     font-size: 4rem;
     text-align: left;
 }
 
-.compang-card #name a{
+.company-card #name a{
     margin: 10rem 0 0 4rem;
     display: inline-block;
     font-size: 3rem;
