@@ -13,7 +13,7 @@ Vue.component('my-file', {
           <img :src='xxx.file_icon'>
           <p >{{xxx.file_title}}</p>
           <p >{{xxx.file_size}}</p>   
-          <a v-if="true" :href='xxx.file_path'><span>查看</span></a> 
+          <a v-if="href_hiden" :href='xxx.file_path'><span>查看</span></a> 
           <a v-else v-on:click="checkDateTime()"><span>已关闭</span></a> 
       </div>`,
   methods:{
@@ -35,7 +35,7 @@ Vue.component('my-file', {
       return this.xxx.file_icon ? this.xxx.file_icon : this.xxx.file_path.split('.').pop()
     },
     href_hiden:function () {
-      return  Date() > Date(Date.parse(this.xxx.closeDate)) ? false : true
+      return  Date.parse(Date()) > Date.parse(this.xxx.closeDate) ? false : true
     }
   },
 })
