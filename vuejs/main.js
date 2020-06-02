@@ -3,7 +3,7 @@
 Vue.component('my-file', {
   data:function(){
     return {
-      file_title1:'zz'
+      count: 0
     }
   },
   props: ['xxx'],
@@ -12,10 +12,16 @@ Vue.component('my-file', {
           <h4>{{xxx.title}}</h4>
           <img :src='xxx.file_icon'>
           <p>{{file_title}}</p>
-          <p>{{xxx.file_size}}</p>
-          <a :href='xxx.file_path'><span>查看</span></a> 
+          <p>{{xxx.file_size}}</p>   
+          <a v-if="!href_hiden" :href='xxx.file_path'><span>查看</span></a> 
+          <a v-else v-on:click="checkDateTime()"><span>已关闭</span></a> 
       </div>`,
+  methods:{
+    checkDateTime:function (){
+      alert('兖矿展会结束，文件停止分享！');
+    }
 
+  },
   computed:{
     file_title:function () {
       return this.xxx.file_title ? this.xxx.file_title : this.xxx.file_path.split('/').pop()
@@ -23,8 +29,11 @@ Vue.component('my-file', {
     ,
     file_icon:function () {
       return this.xxx.file_icon ? this.xxx.file_icon : this.xxx.file_path.split('.').pop()
+    },
+    href_hiden:function () {
+      return  Date() > Date(Date.parse(this.xxx.closeDate)) ? false : true
     }
-  }
+  },
 })
 
 Vue.component('my-company', {
