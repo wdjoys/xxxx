@@ -13,7 +13,7 @@ Vue.component('my-file', {
           <img :src='xxx.file_icon'>
           <p >{{xxx.file_title}}</p>
           <p >{{xxx.file_size}}</p>   
-          <a v-if="href_hiden" :href='xxx.file_path'><span>查看</span></a> 
+          <a v-if="true" :href='xxx.file_path'><span>查看</span></a> 
           <a v-else v-on:click="checkDateTime()"><span>已关闭</span></a> 
       </div>`,
   methods:{
