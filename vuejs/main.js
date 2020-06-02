@@ -9,10 +9,10 @@ Vue.component('my-file', {
   props: ['xxx'],
   template: `
       <div class="main">
-          <h4>{{xxx.title}}</h4>
+          <h4 v-for='title in titles'>{{title}}</h4>
           <img :src='xxx.file_icon'>
-          <p>{{file_title}}</p>
-          <p>{{xxx.file_size}}</p>   
+          <p >{{xxx.file_title}}</p>
+          <p >{{xxx.file_size}}</p>   
           <a v-if="!href_hiden" :href='xxx.file_path'><span>查看</span></a> 
           <a v-else v-on:click="checkDateTime()"><span>已关闭</span></a> 
       </div>`,
@@ -23,6 +23,10 @@ Vue.component('my-file', {
 
   },
   computed:{
+    titles:function(){
+      return this.xxx.title.split('\n')
+    },
+
     file_title:function () {
       return this.xxx.file_title ? this.xxx.file_title : this.xxx.file_path.split('/').pop()
     }
