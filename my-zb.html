@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>天地奔牛 - 展品设备介绍 - H5</title>
     <!--     <script src="./js/rem.js"></script>-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-    <link rel="stylesheet" href="./css/main.css">
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vue@2.6.11"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
     <script type="text/javascript" src="./vuejs/main.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-         <my-file v-bind:xxx="file_1"></my-file>
-         <my-company></my-company>
+      <my-file v-bind:xxx="file_1"></my-file>
+      <my-company></my-company>
     </div>
-    <script type="text/javascript" >
-        var app = new Vue({
-            el: '#app',
-            data: {
-                file_1: {
-                    'title': '兖矿国家智能开采现场会 \n 天地奔牛展品介绍',
-                    'file_icon': './img/edifice.jpg',
-                    'file_title': '',
-                    'file_size': '',
-                    // 'file_path': './dzb.pdf'
-                    'file_path': 'https://preview-static.clewm.net/cli/view-doc/view.html?url=https%3A%2F%2Fncstatic.clewm.net%2Frsrc%2F2020%2F0528%2F18%2Fff85d5ec0b6de11a907c32f57d5a7adb.pdf&filename=dzb.pdf&download=1&code=qXUSw7k&open=45a1642856fb47c39f875bf823d88a05&_=1590972975083&frompc=false',
-                    'closeDate': '2020-06-03 11:30:00'
-                }
-            }
-        });
+    <script type="text/javascript">
+      var app = new Vue({
+        el: "#app",
+        data: {
+          file_1: {
+            title: "兖矿国家智能开采现场会 \n 天地奔牛展品介绍",
+            file_icon: "./img/edifice.jpg",
+            file_title: "",
+            file_size: "",
+            // 'file_path': './dzb.pdf'
+            file_path:
+              "https://preview-static.clewm.net/cli/view-doc/view.html?url=https%3A%2F%2Fncstatic.clewm.net%2Frsrc%2F2020%2F0619%2F16%2F832a3dbebdbff1433eeb936ecbd9a184.pdf&filename=2%E3%80%81%E9%9D%9E%E5%B1%95%E5%93%81%E5%B1%95%E6%9D%BF%EF%BC%88%E6%B1%87%E6%80%BB%EF%BC%8920200619%201420.pdf&download=1&code=qPHSDa3&open=4cd29828d51d4c509f8b590ae1813b93&_=1592557262175&frompc=false",
+            closeDate: "2020-06-03 11:30:00",
+          },
+        },
+      });
     </script>
-</body>
+  </body>
 </html>
