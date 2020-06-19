@@ -1,7 +1,7 @@
 //定义vue组件
 
 Vue.component('my-file', {
-  data:function(){
+  data: function () {
     return {
       count: 0
     }
@@ -16,26 +16,28 @@ Vue.component('my-file', {
           <a v-if="href_hiden" :href='xxx.file_path'><span>查看</span></a> 
           <a v-else v-on:click="checkDateTime()"><span>已关闭</span></a> 
       </div>`,
-  methods:{
-    checkDateTime:function (){
+  methods: {
+    checkDateTime: function () {
       alert('兖矿展会结束，文件停止分享！');
     }
 
   },
-  computed:{
-    titles:function(){
+  computed: {
+    titles: function () {
       return this.xxx.title.split('\n')
     },
 
-    file_title:function () {
+    file_title: function () {
       return this.xxx.file_title ? this.xxx.file_title : this.xxx.file_path.split('/').pop()
     }
     ,
-    file_icon:function () {
+    file_icon: function () {
       return this.xxx.file_icon ? this.xxx.file_icon : this.xxx.file_path.split('.').pop()
     },
-    href_hiden:function () {
-      return  Date.parse(Date()) > Date.parse(this.xxx.closeDate) ? false : true
+    href_hiden: function () {
+      let href_hiden = Date.parse(Date()) > Date.parse(this.xxx.closeDate) ? false : true
+      console.log(Date.parse(Date()), Date.parse(this.xxx.closeDate));
+      return href_hiden
     }
   },
 })
